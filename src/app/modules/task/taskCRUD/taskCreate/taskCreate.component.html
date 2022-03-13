@@ -1,0 +1,38 @@
+
+<button  mat-button (click)="Return()">
+    <span>RETORNAR</span>
+</button>
+
+
+
+
+
+<hr />
+
+<div class="po-row">
+  <po-info class="po-md-12" p-label="Criação de Tarefas" > </po-info>
+</div>
+
+<hr />
+
+<form >
+  <div class="po-row">
+    <po-input [(ngModel)]="title" class="po-md-6" name="Titulo"  p-clean p-label="Titulo"> </po-input>
+
+    <po-datepicker class="po-md-6" [(ngModel)]="dateTime" name="datepicker" p-label="Data"> </po-datepicker>
+  </div>
+
+  <div class="po-row">
+    <po-checkbox class="po-md-6" name="checkbox" [(ngModel)]="check" p-label="Finalizada?"> </po-checkbox>
+
+  </div>
+
+
+  <div class="po-row">
+    <po-textarea class="po-md-12" name="textarea" [(ngModel)]="description" p-label="Descrição"> </po-textarea>
+  </div>
+
+  <div class="po-row">
+    <po-button class="po-md-3" p-label="SALVAR" (click)="openDialogConfirmSave()"> </po-button>
+  </div>
+</form>
